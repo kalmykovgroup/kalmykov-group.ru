@@ -1,12 +1,14 @@
-import './Search.css'
-
-function Search() {
+import './Favourites.css'
+import favouritesIcon from '/src/assets/favourites.svg'
+import {Link} from "react-router-dom";
+function Favourites() {
 
     return (
-        <div className="search">
-                Search
-        </div>
+        <Link  className="favourites"  to={`/favourites`}>
+            <img src={favouritesIcon} className="favouritesIcon" alt="Favourites"/>
+            <span>Избранное</span>
+        </Link>
     )
 }
 
-export default Search
+export default Favourites

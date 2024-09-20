@@ -1,0 +1,54 @@
+.header{
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigateBlock{
+    height: 76px;
+    border: 1px solid #ffffff;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, auto) 1fr repeat(4, auto);
+    gap: 5px;
+}
+
+.logo{
+    grid-column: 1;
+}
+.menu{
+    grid-column: 2;
+}
+
+.search{
+    grid-column: 3;
+}
+.orders{
+    grid-column: 4;
+}
+.favourites{
+    grid-column: 5;
+}
+.cart{
+    grid-column: 6;
+}
+.profile{
+    grid-column: 7;
+}
+
+
+.orders,
+.favourites,
+.cart,
+.profile{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+}
+
+
+
