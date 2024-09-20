@@ -12,8 +12,15 @@
     background: white;
     border: 2px solid #75bb75;
     border-radius: 5px;
-    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    color: black;
 }
+
+
+
+
+
 
 .input{
     width: 100%;

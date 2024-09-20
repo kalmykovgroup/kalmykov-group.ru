@@ -1,18 +1,18 @@
 import './Search.css'
 
-function Search() {
+const Search = () => {
 
-    return (
-        <div className="searchContainer">
-            <div className="inputContainer">
-                <input className="input" placeholder="Найти товары"/>
+    return (<>
+            <div className="searchContainer">
+                <div className="inputContainer">
+                    <input className="input" placeholder="Найти товары"/>
+                </div>
+
+                <button className="btnSend">
+                    Найти
+                </button>
             </div>
-
-            <button className="btnSend">
-               Найти
-            </button>
-        </div>
-
+    </>
 
     )
 }

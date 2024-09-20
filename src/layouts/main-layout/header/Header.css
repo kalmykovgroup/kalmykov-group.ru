@@ -11,7 +11,9 @@
     align-items: center;
     display: grid;
     grid-template-columns: repeat(2, auto) 1fr repeat(4, auto);
-    gap: 5px;
+    gap: 15px;
+
+    padding: 0 30px;
 }
 
 .logo{
@@ -42,12 +44,19 @@
 .favourites,
 .cart,
 .profile{
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: black;
+    color: #0b0b0b;
+    font-size: 12px;
+}
+
+.orders:hover,
+.favourites:hover,
+.cart:hover,
+.profile:hover{
+    color: #6c6000;
 }
 
 

@@ -1,6 +1,5 @@
 
 .menu{
-    width: 50px;
     height: 40px;
     background: #75bb75;
     display: flex;
@@ -8,6 +7,9 @@
     align-items: center;
     border-radius: 8px;
     margin-right: 10px;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0 10px;
 }
 
 .menu:hover{
