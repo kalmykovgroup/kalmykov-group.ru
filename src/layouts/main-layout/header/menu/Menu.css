@@ -1,0 +1,21 @@
+
+.menu{
+    width: 50px;
+    height: 40px;
+    background: #75bb75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.menu:hover{
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 0 3px white;
+}
+
+.menuIcon{
+    width: 24px;
+}
