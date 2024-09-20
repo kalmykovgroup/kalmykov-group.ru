@@ -52,6 +52,13 @@
     font-size: 12px;
 }
 
+.orders img,
+.favourites img,
+.cart img,
+.profile img{
+   width: 18px;
+}
+
 .orders:hover,
 .favourites:hover,
 .cart:hover,

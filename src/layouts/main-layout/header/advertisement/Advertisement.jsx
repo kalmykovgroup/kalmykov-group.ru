@@ -4,7 +4,7 @@ function Advertisement() {
 
     return (
         <div className="advertisement">
-
+            Реклама
         </div>
     )
 }

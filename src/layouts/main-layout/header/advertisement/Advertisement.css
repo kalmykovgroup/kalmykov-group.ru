@@ -1,5 +1,10 @@
 .advertisement{
 
-    height: 56px;
-    border: 1px solid red;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: rgba(0, 0, 0, 0.47);
 }
+

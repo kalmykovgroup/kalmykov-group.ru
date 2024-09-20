@@ -47,7 +47,6 @@
 
 .inputContainer:focus-within{
     border: 2px solid white;
-
     box-shadow: 0 0 5px white;
 }
 
@@ -63,4 +62,9 @@
     background: #75bb75;
     font-size: 17px;
     z-index: 3;
+}
+
+.btnSend:hover{
+    background: #64a66a;
+    border: 2px solid #64a66a;
 }
