@@ -8,7 +8,7 @@ import Cart from "./cart/Cart.jsx";
 import Logo from "./logo/Logo.jsx";
 import Profile from "./profile/Profile.jsx";
 
-function Header() {
+const Header = () => {
 
     return (
         <div className="header">
@@ -18,7 +18,7 @@ function Header() {
             <div className="navigateBlock">
                 <Logo className="logo"/>
                 <Menu className="menu"/>
-                <Search className="search"/>
+                <Search  className="search"/>
                 <Orders className="orders"/>
                 <Favourites className="favourites"/>
                 <Cart className="cart"/>

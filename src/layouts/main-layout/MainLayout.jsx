@@ -2,18 +2,32 @@ import './MainLayout.css'
 import Header from "./header/Header.jsx";
 import Content from "./content/Content.jsx";
 import Footer from "./footer/Footer.jsx";
+import Darkening from "../../components/darkening/Darkening.jsx";
+import {Component} from "react";
 
 
-const MainLayout = () => (
-    <div>
-        <Header/>
-        <Content/>
-        <Footer/>
+class MainLayout extends Component {
 
-    </div>
-);
+    constructor(props) {
+        super(props);
+    }
 
 
-export default MainLayout
+    render() {
+        return(
+            <>
+                <Header/>
+                <Content/>
+                <Footer/>
+
+            </>
+        );
+    }
+}
+
+export default MainLayout;
+
+
+
 
 
