@@ -1,9 +1,8 @@
-import './Advertisement.css'
-
+import styles from './Advertisement.module.css';
 function Advertisement() {
 
     return (
-        <div className="advertisement">
+        <div className={styles.advertisement}>
             Реклама
         </div>
     )
