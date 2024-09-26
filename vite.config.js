@@ -7,6 +7,15 @@ export default defineConfig({
   css: {
     modules: true,
   },
+  test: {
+    // 👋 add the line below to add jsdom to vite
+    environment: 'jsdom',
+    // hey! 👋 over here
+  //  globals: true,
+    //setupFiles: './tests/setup.js', // предполагая, что тестовая папка находится в корневом каталоге нашего проекта
+  }
 })
+
+
 
 

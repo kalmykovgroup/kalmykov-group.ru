@@ -5,6 +5,5 @@ import AppRouterProvider from "./AppRouterProvider.jsx";
 
 
 createRoot(document.getElementById('root')).render(
-
       <AppRouterProvider/>
 )
