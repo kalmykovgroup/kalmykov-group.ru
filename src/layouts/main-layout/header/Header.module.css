@@ -1,12 +1,10 @@
 
-.header_right_item{
-    background: red;
-}
 
 .header{
     background: white;
     display: flex;
     flex-direction: column;
+
 }
 
 .navigateContainer{
@@ -17,7 +15,11 @@
     grid-template-rows: 1fr auto;
     align-items: center;
     background: white; /*нужен при затемнении*/
+    box-sizing: border-box;
+    width: 100%;
 }
+
+
 
 .navigations{
     grid-row: 1;
@@ -27,7 +29,9 @@
     display: grid;
     grid-template-columns: repeat(2, auto) 1fr repeat(4, auto);
     gap: 15px;
-    padding: 0 30px;
+    width: calc(100% - 80px);
+    max-width: 1472px;
+    margin: 0 auto;
 }
 
 
@@ -56,9 +60,11 @@
 
 
 .categoryContainer{
+    width: 100%;
     height: 0;
     position: relative;
     animation: showMenu .2s ease-out forwards;
+    z-index: 2;
 }
 
 @keyframes showMenu {

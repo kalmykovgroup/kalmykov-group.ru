@@ -2,6 +2,7 @@ import styles from './History.module.css';
 
 import Cookies from "universal-cookie";
 import {Component} from "react";
+import PropTypes from "prop-types";
 
 class History extends Component {
 
@@ -174,6 +175,9 @@ class History extends Component {
     }
 
 }
+History.propTypes = {
+    searchClick: PropTypes.func,
+};
 
 
 export default History

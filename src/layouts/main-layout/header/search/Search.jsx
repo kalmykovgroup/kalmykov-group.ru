@@ -18,11 +18,6 @@ class Search extends Component {
 
         this.cookies = new Cookies();
 
-       /* this.cookies.set(this.cookieHistoryKey, [
-            'Кусачки', 'Пассатижы', 'Отвертка',
-            'сифон', 'ноут', 'паяльник',
-            'начо', 'шмот', 'кот',
-        ]);*/
         this.refHistory = React.createRef();
 
         this.refSearchInput = React.createRef();
@@ -32,6 +27,8 @@ class Search extends Component {
             setCancelingBlackoutZIndex={(zIndex) => this.setState({cancelingBlackoutZIndex : zIndex})}
             callBack={() => this.blackoutCallBack()}
             setRef={(ref) => this.blackout = ref}/>
+
+        this.visHistory = <History  searchClick={(text) => this.searchClick(text)}  ref={this.refHistory}></History>
     }
 
 
@@ -88,8 +85,8 @@ class Search extends Component {
                     <button className={styles.btnSend} onClick={() => this.searchClick()}>
                         Найти
                     </button>
+                    {this.visHistory}
 
-                    <History searchClick={(text) => this.searchClick(text)}  ref={this.refHistory}></History>
 
                 </div>
             </>

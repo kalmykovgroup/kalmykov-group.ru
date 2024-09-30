@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it} from 'vitest'
 import History from "./History.jsx";
-import React from "react";
 
 
 describe('History', () => {

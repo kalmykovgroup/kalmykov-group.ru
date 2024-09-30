@@ -125,30 +125,34 @@ class Categories extends Component{
 
 
         return (
-            <div className={styles.categories}>
-                    <ul className={styles.leftCategoryMenu}>
-                        {listItems}
-                    </ul>
-                    <div className={styles.rightCategoryContainer}>
-                        <div>
-                            <Link  className={`${styles.bigTitle}`}  to={`/categories`}>
-                                {this.state.activeCategory?.name}
-                            </Link>
-                        </div>
-                        <div>
+            <div className={styles.container}>
 
-                            <div className={styles.categoryContainer}>
-                                {/*нужно отобразить категории сеткой, но в три столбца. Таким образом мы помещаем каждый третюю категорию.
-                                0,1,2 - Это отступ для цыкла, который берет каждую 3 запись*/}
-                                <div className={styles.wrapper}>{this.showCategoriesCategoryActive(0)}</div>
-                                <div className={styles.wrapper}>{this.showCategoriesCategoryActive(1)}</div>
-                                <div className={styles.wrapper}>{this.showCategoriesCategoryActive(2)}</div>
 
+                <div className={styles.categories}>
+                        <ul className={styles.leftCategoryMenu}>
+                            {listItems}
+                        </ul>
+                        <div className={styles.rightCategoryContainer}>
+                            <div>
+                                <Link  className={`${styles.bigTitle}`}  to={`/categories`}>
+                                    {this.state.activeCategory?.name}
+                                </Link>
+                            </div>
+                            <div>
+
+                                <div className={styles.categoryContainer}>
+                                    {/*нужно отобразить категории сеткой, но в три столбца. Таким образом мы помещаем каждый третюю категорию.
+                                    0,1,2 - Это отступ для цыкла, который берет каждую 3 запись*/}
+                                    <div className={styles.wrapper}>{this.showCategoriesCategoryActive(0)}</div>
+                                    <div className={styles.wrapper}>{this.showCategoriesCategoryActive(1)}</div>
+                                    <div className={styles.wrapper}>{this.showCategoriesCategoryActive(2)}</div>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
+                 </div>
+           </div>
         );
     }
 

@@ -1,20 +1,26 @@
 
-.categories{
+.container{
    position: absolute;
     left: 0;
     height:70vh;
-
     width: 100%;
     background: white;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scrollbar-width: auto;
+    scrollbar-color: #494949 rgba(186, 186, 186, 0.3);
+}
+
+.categories{
     color: black;
     padding: 0 30px;
     text-align: left;
     display: grid;
     grid-template-columns: auto 1fr;
-
-    scroll-behavior: smooth;
-    overflow-x: scroll;
-    overflow-y: scroll;
+    width: calc(100% - 80px);
+    max-width: 1472px;
+    margin: 0 auto;
 }
 
 .leftCategoryMenu{

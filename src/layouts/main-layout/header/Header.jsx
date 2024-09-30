@@ -11,9 +11,13 @@ import Categories from "./categories/Categories.jsx";
 import PropTypes from "prop-types";
 import Blackout from "../../../components/blackout/Blackout.jsx";
 import {Component} from "react";
+import {Device} from "../../Root.jsx";
+
 
 class Header extends Component {
 
+
+    static contextType = Device;
     constructor(props) {
         super(props);
 
@@ -39,14 +43,17 @@ class Header extends Component {
         this.setState({
             isOpenMenu : false
         })
+        document.body.style.overflow = "auto";
     }
 
     clickMenu() {
 
         if (!this.state.isOpenMenu) {//Показать затемнение
             this.blackout().on();
+            document.body.style.overflow = "hidden";
         } else { //Отменить затемнение
             this.blackout().off();
+            document.body.style.overflow = "auto";
         }
         this.setState({
             isOpenMenu : !this.state.isOpenMenu
@@ -55,41 +62,54 @@ class Header extends Component {
     }
 
 
-
+    Menu(){
+        return(
+            <>
+                <Orders className={styles.orders}/>
+                <Favourites className={styles.favourites}/>
+                <Cart className={styles.cart}/>
+                <Profile className={styles.profile}/>
+            </>
+        );
+    }
 
     render()
     {
+        const { context } = this;
+
         return (
             <>
                 { this.visBlackout}
 
-              <div className={styles.header}>
-                <div>
-                    <Advertisement/>
-                </div>
-                <div style={{zIndex: this.state.cancelingBlackoutZIndex}} className={styles.navigateContainer}>
+                <div className={styles.header}>
+                    <div>
+                        <Advertisement />
+                    </div>
+                    <div style={{zIndex: this.state.cancelingBlackoutZIndex}} className={styles.navigateContainer}>
 
-                    <div className={styles.navigations}>
-                        <Logo className={styles.logo}/>
-                        <Menu className={styles.menu} isOpen={this.state.isOpenMenu} clickMenu={() => this.clickMenu()}/>
-                        <Search className={styles.search}/>
-                        <Orders className={styles.orders}/>
-                        <Favourites className={styles.favourites}/>
-                        <Cart className={styles.cart}/>
-                        <Profile className={styles.profile}/>
 
+                        <div className={styles.navigations}>
+                            <Logo className={styles.logo}/>
+
+                            <Menu className={styles.menu} isOpen={this.state.isOpenMenu}
+                                  clickMenu={() => this.clickMenu()}/>
+                            <Search className={styles.search}/>
+
+                            {context.isDesktop ? this.Menu() : ""}
+
+                        </div>
+
+                        <div className={styles.categoryContainer}
+                             style={{"display": this.state.isOpenMenu ? "block" : "none"}}>
+                            <Categories/>
+                        </div>
                     </div>
 
-                    <div className={styles.categoryContainer} style={{"display": this.state.isOpenMenu ? "block" : "none"}}>
-                        <Categories/>
-                    </div>
-
                 </div>
-            </div>
             </>
         )
     }
-    
+
 }
 
 
@@ -100,4 +120,4 @@ Header.propTypes = {
 
 
 
-export default Header
+export default  Header;
